@@ -1,11 +1,12 @@
 import random
-numuser = int(input("Digite um número entre de 1 a 5: "))
-if 1 > numuser > 5:
-    print('Digite um número de 1 a 5')
-print("O número digitado pelo usuário foi {}.".format(numuser))
-numsorteio = random.randint(1, 5)
-print("o número sorteado foi {}".format(numsorteio))
-if numuser == numsorteio:
-    print("Você escolheu um número igual ao sorteado.")
+num = int(input("Digite um número de 1 a 5: "))
+while num <= 1 and num <= 5:
+    print("O número digitado pelo usuário foi {}.".format(num))
+numsort = random.randint(1, 5)
+print("o número sorteado foi {}".format(numsort))
+if num == numsort:
+    print("Você acertou o número!")
+elif num != numsort:
+    print("Você não adivinhou o número corretamente")
 else:
-    print("o númer escolhido não foi o mesmo do que o sorteado.")
+    print("O número digitado não é válido.")
